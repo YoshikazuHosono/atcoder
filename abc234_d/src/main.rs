@@ -1,3 +1,5 @@
+use itertools::Itertools;
+
 fn main() {
     proconio::input! {
         n: usize,
@@ -10,7 +12,7 @@ fn main() {
     p[..k - 1].iter().for_each(|&x| panel[x] = true);
 
     let mut answer = 0;
-    p[k - 1..].iter().for_each(|&x| {
+    println!("{}", p[k - 1..].iter().map(|&x| {
         panel[x] = true;
 
         if (x) > answer {
@@ -20,6 +22,6 @@ fn main() {
             };
         }
 
-        println!("{}", answer);
-    });
+        answer
+    }).join("\n"));
 }
