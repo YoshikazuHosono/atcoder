@@ -1,9 +1,6 @@
+// https://onlinejudge.u-aizu.ac.jp/problems/ITP1_1_A
 use proconio::input;
 
 fn main() {
-    input! {
-        r: u16,
-    }
-
-    println!("{}", r * r);
+    println!("Hello World");
 }
